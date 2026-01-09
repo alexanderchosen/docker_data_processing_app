@@ -4,7 +4,7 @@ FROM python:3.12.12-slim-bookworm
 # I have to create a directory for the dockerfile
 WORKDIR /app
 
-# copy the reuirements.txt file to the dockerfile directory
+# copy the requirements.txt file to the dockerfile directory
 COPY requirements.txt .
 
 # install the application dependencies found in the requirement.txt file
@@ -17,4 +17,4 @@ COPY ./app ./app
 EXPOSE 8501
 
 # run the application with a set container's entrypoint
-CMD ["streamlit", "run", "app/data_process.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app/data_process.py"]
